@@ -64,7 +64,6 @@ export const fetchAlbumInfos = (id) => {
   return (dispatch, getState) => {
     axios(process.env.REACT_APP_API_URL + '/deezer/albumInfo/' + id, {
       method: 'GET',
-      withCredentials: true,
     })
       .then((resp) => resp.data)
       .then((respObj) =>
@@ -97,7 +96,6 @@ export const fetchArtistInfos = (id) => {
   return (dispatch, getState) => {
     axios(process.env.REACT_APP_API_URL + '/deezer/artitisInfo/' + id, {
       method: 'GET',
-      withCredentials: true,
     }).then((data) =>
       dispatch({
         type: 'FETCH_ARTIST',
